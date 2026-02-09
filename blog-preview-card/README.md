@@ -23,5 +23,5 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [SOLUTION](https://github.com/ahmedmahfoudhi/frontend-mentor-challenges/blog-preview-card)
-- Live Site URL: [LIVE_SITE](https://ahmedmahfoudhi.github.io/frontend-mentor-challenges/blog-preview-card/)
+- Solution URL: [SOLUTION](https://github.com/ahmedmahfoudhi/frontend-mentor-challenges/tree/main/blog-preview-card)
+- Live Site URL: [LIVE_SITE](https://ahmedmahfoudhi.github.io/frontend-mentor-challenges/blog-preview-card/index.html)
