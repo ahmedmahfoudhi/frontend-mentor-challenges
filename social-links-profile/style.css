@@ -82,10 +82,14 @@ body {
 }
 
 .social-links {
+  width: 100%;
+}
+
+.social-links ul{
+  list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 100%;
 }
 
 .social-links a {
@@ -96,7 +100,9 @@ body {
   font-size: var(--fs-14);
   text-decoration: none;
   color: var(--white);
-  
+  display: inline-block;
+  width: 100%;
+
 }
 
 .social-links a:hover {
