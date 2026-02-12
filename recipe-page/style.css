@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'Young Serif';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/static/Outfit-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/static/Outfit-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/static/Outfit-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --rose-800: #7A284E;
+    --rose-50: #FFF7FB;
+    --stone-900: #312E2C;
+    --stone-600: #5F564D;
+    --stone-150: #E3DDD7;
+    --stone-100: #F3E5D7;
+    --brown-800: #854632;
+    --white: #FFFFFF;
+
+    --spacing-1600: 128px;
+    --spacing-600: 48px;
+    --spacing-500: 40px;
+    --spacing-400: 32px;
+    --spacing-300: 24px;
+    --spacing-250: 20px;
+    --spacing-200: 16px;
+    --spacing-150: 12px;
+    --spacing-100: 8px;
+
+    --font-family-young: 'Young Serif', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-family-outfit: 'Outfit', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    place-items: center;
+    background-color: var(--stone-100);
+    font-family: var(--font-family-outfit);
+    font-size: var(--spacing-200);
+    line-height: 1.5;
+    color: var(--stone-600);
+}
+
+main {
+    padding: var(--spacing-500);
+    background-color: var(--white);
+    max-width: 736px;
+    margin: var(--spacing-1600) auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--spacing-300);
+    gap: var(--spacing-500);
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: var(--spacing-150);
+    display: block;
+}
+
+main article {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300)
+}
+
+.heading h1 {
+    font-size: var(--spacing-500);
+    font-family: var(--font-family-young);
+    line-height: 100%;
+}
+
+.preparation {
+    background-color: var(--rose-50);
+    padding: var(--spacing-300);
+    border-radius: var(--spacing-150);
+}
+
+.preparation h2 {
+    color: var(--rose-800);
+    font-size: var(--spacing-250);
+    line-height: 150%;
+}
+
+.preparation .list {
+    margin-top: var(--spacing-200);
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+    line-height: 150%;
+}
+
+section h2 {
+    color: var(--brown-800);
+    font-size: var(--spacing-250);
+    font-family: var(--font-family-young);
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutrition-table tr:not(:last-child) {
+  border-bottom: 1px solid var(--stone-150);
+}
+
+.nutrition-table td {
+  padding: var(--spacing-150) var(--spacing-400);
+}
+
+.nutrition-table td:first-child {
+  padding-left: var(--spacing-400);
+  width: 50%;
+}
+
+.nutrition-table td:last-child {
+  font-weight: 700;
+  color: var(--brown-800);
+}
+
+/** Utility classes */
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--stone-150);
+}
+
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+    padding-left: var(--spacing-300);
+}
+
+.list li {
+    padding-left: var(--spacing-200);
+}
+
+
+.list li::marker {
+    color: var(--brown-800);
+    font-weight: bold;
+}
+
+.list li span {
+    font-weight: bold;
+    color: var(--stone-600);
+}
+
+/* Focus styles for accessibility */
+a:focus-visible {
+    outline: 2px solid var(--brown-800);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Attribution styles */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: var(--spacing-200);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+
+    main {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    main img {
+        border-radius: 0;
+    }
+
+    main article {
+        padding: var(--spacing-500);
+    }
+
+    .heading h1 {
+        font-size: var(--spacing-400);
+    }
+}
